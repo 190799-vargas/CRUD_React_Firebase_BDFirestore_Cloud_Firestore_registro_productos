@@ -1,70 +1,137 @@
-# Getting Started with Create React App
+# CRUD con Firebase Firestore y React
+![alt text](image.png)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Aplicación CRUD (Create, Read, Update, Delete) desarrollada con React y Firebase Firestore para la gestión de productos.
 
-## Available Scripts
+## Características principales
+✅ Creación de productos
 
-In the project directory, you can run:
+✅ Visualización de lista de productos
 
-### `npm start`
+✅ Actualización de productos existentes
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+✅ Integración con Firebase Firestore
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+✅ Routing con React Router
 
-### `npm test`
+✅ Diseño responsive con Bootstrap
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Tecnologías utilizadas
+### Frontend:
+- React 19
+- React Router DOM
+- Bootstrap 5
+- SweetAlert2 para notificaciones
 
-### `npm run build`
+### Backend:
+- Firebase Firestore (NoSQL database)
+- Firebase Authentication (opcional)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Estructura del proyecto
+public/
+src/
+├── components/
+│   ├── Create.js     # Componente para crear productos
+│   ├── Edit.js       # Componente para editar productos
+│   └── Show.js       # Componente para mostrar productos
+├── firebaseConfig/
+│   └── firebase.js   # Configuración de Firebase
+├── App.js            # Componente principal
+├── App.css
+├── index.js          # Punto de entrada
+├── index.css
+├── package.json
+└──package-lock.json
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Configuración inicial
+### Requisitos
+- Node.js (v16+ recomendado)
+- npm (v8+ recomendado)
 
-### `npm run eject`
+- Cuenta de Firebase
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Instalación
+Clonar el repositorio:
+```bash
+git clone https://github.com/190799-vargas/CRUD_React_Firebase_BDFirestore_Cloud_Firestore_registro_productos
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+cd crud-firestore-react
+### Instalar dependencias:
+```bash
+npm install
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Configurar Firebase:
+- Crea un proyecto en Firebase Console
+- Copia tu configuración en src/firebaseConfig/firebase.js
+- javascript
+const firebaseConfig = {
+  apiKey: "TU_API_KEY",
+  authDomain: "TU_AUTH_DOMAIN",
+  projectId: "TU_PROJECT_ID",
+  storageBucket: "TU_STORAGE_BUCKET",
+  messagingSenderId: "TU_MESSAGING_SENDER_ID",
+  appId: "TU_APP_ID"
+};
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Iniciar la aplicación:
+```bash
+npm start
+```
+## Uso de la aplicación
+- Ver productos (/):
+- Listado completo de productos
+- Opciones para editar cada producto
+- Crear producto (/create):
+- Formulario con campos:
+- Descripción (texto)
+- Stock (número)
+- Editar producto (/edit/:id):
+- Formulario pre-llenado con los datos del producto
+- Posibilidad de modificar descripción y stock
+- Eliminar un producto
 
-## Learn More
+## Variables de entorno
+Crea un archivo .env en la raíz con:
+```bash
+REACT_APP_FIREBASE_API_KEY=TU_API_KEY
+REACT_APP_FIREBASE_AUTH_DOMAIN=TU_AUTH_DOMAIN
+REACT_APP_FIREBASE_PROJECT_ID=TU_PROJECT_ID
+REACT_APP_FIREBASE_STORAGE_BUCKET=TU_STORAGE_BUCKET
+REACT_APP_FIREBASE_MESSAGING_SENDER_ID=TU_MESSAGING_SENDER_ID
+REACT_APP_FIREBASE_APP_ID=TU_APP_ID
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Scripts disponibles
+- npm start: Inicia la aplicación en modo desarrollo
+- npm run build: Crea la versión de producción
+- npm test: Ejecuta las pruebas
+- npm run eject: Expone la configuración de webpack (irreversible)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Despliegue
+Puedes desplegar esta aplicación en:
 
-### Code Splitting
+### Firebase Hosting:
+```bash
+npm install -g firebase-tools
+firebase login
+firebase init
+firebase deploy
+Vercel:
+npm install -g vercel
+vercel
+Netlify:
+Conectar tu repositorio Git directamente
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Contribución
+- Haz fork del proyecto
+- Crea una rama (git checkout -b feature/nueva-funcionalidad)
+- Haz commit de tus cambios (git commit -am 'Añade nueva funcionalidad')
+- Haz push a la rama (git push origin feature/nueva-funcionalidad)
+- Abre un Pull Request
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Licencia
+MIT © Victor Alfonso Vargas Diaz
