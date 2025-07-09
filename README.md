@@ -113,6 +113,22 @@ REACT_APP_FIREBASE_APP_ID=TU_APP_ID
 - npm test: Ejecuta las pruebas
 - npm run eject: Expone la configuración de webpack (irreversible)
 
+## Demo
+[Ver aplicación en vivo](https://tu-url-de-demo.com)
+
+## Tecnologías
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![Firebase](https://img.shields.io/badge/Firebase-039BE5?style=for-the-badge&logo=Firebase&logoColor=white)
+
+## Uso rápido
+```javascript
+// Ejemplo de creación de producto
+const newProduct = {
+  description: "Producto de ejemplo",
+  stock: 100
+};
+```
+
 ## Despliegue
 Puedes desplegar esta aplicación en:
 
