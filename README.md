@@ -28,6 +28,7 @@ Aplicación CRUD (Create, Read, Update, Delete) desarrollada con React y Firebas
 - Firebase Authentication (opcional)
 
 ## Estructura del proyecto
+```bash
 public/
 src/
 ├── components/
@@ -42,7 +43,7 @@ src/
 ├── index.css
 ├── package.json
 └──package-lock.json
-
+```
 
 ## Configuración inicial
 ### Requisitos
