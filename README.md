@@ -1,6 +1,6 @@
 # CRUD con Firebase Firestore y React
 ![alt text](image.png)
-
+https://miro.medium.com/v2/resize:fit:1200/1*R4c8lHBHuH5qyqOtZb3h-w.png
 Aplicación CRUD (Create, Read, Update, Delete) desarrollada con React y Firebase Firestore para la gestión de productos.
 
 ## Características principales
